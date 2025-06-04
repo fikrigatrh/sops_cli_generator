@@ -641,7 +641,7 @@ func encryptFieldsRecursive(data interface{}, currentPath string, encryptSet map
 			}
 
 			// Check if this field should be encrypted
-			shouldEncrypt := encryptSet[newPath] || encryptSet[currentPath]
+			shouldEncrypt := encryptSet[newPath]
 
 			if shouldEncrypt {
 				// Handle leaf values immediately
